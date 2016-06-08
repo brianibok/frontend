@@ -104,4 +104,13 @@ trait ABTestSwitches {
     exposeClientSide = true
   )
 
+  val giraffe = Switch(
+    SwitchGroup.ABTests,
+    "ab-giraffe",
+    "some text",
+    owners = Seq(Owner.withGithub("markjamesbutler")),
+    safeState = On,
+    sellByDate = new LocalDate(2016, 7, 1),
+    exposeClientSide = true
+  )
 }

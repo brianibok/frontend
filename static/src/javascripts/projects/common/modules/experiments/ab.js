@@ -16,7 +16,8 @@ define([
     'common/modules/experiments/tests/video-football-thrasher',
     'common/modules/experiments/tests/visitor-frequency-quick-survey',
     'common/modules/experiments/tests/video-yellow-button',
-    'common/modules/experiments/tests/participation-low-fric-music-v2'
+    'common/modules/experiments/tests/participation-low-fric-music-v2',
+    'common/modules/experiments/tests/giraffe'
 ], function (
     reportError,
     config,
@@ -35,7 +36,8 @@ define([
     VideoFootballThrasher,
     VisitorFrequencyQuickSurvey,
     VideoYellowPlayButton,
-    ParticipationLowFricMusicV2
+    ParticipationLowFricMusicV2,
+    Giraffe
 ) {
 
     var TESTS = [
@@ -48,7 +50,8 @@ define([
         new VideoFootballThrasher(),
         new VisitorFrequencyQuickSurvey(),
         new VideoYellowPlayButton(),
-        new ParticipationLowFricMusicV2()
+        new ParticipationLowFricMusicV2(),
+        new Giraffe()
     ];
 
     var participationsKey = 'gu.ab.participations';
