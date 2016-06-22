@@ -131,6 +131,11 @@
     }
 }
 .top-banner-ad-container--wimbledon {
+    @include mq(tablet) {
+        > .ad-slot--top-banner-ad {
+            height: 353px;
+        }
+    }
     @include mq(leftCol) {
         > .ad-slot--top-banner-ad {
             height: 385px;
