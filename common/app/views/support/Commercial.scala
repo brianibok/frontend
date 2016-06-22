@@ -35,8 +35,7 @@ object Commercial {
     }
 
     private def isWimbledonEnabled(metaData: MetaData, edition: Edition) = {
-        true
-    //   (metaData.id == "sport/tennis" || metaData.id == "sport/wimbledon") && edition == Uk
+      (metaData.id == "sport/tennis" || metaData.id == "sport/wimbledon") && edition == Uk
     }
 
     def adSizes(metaData: MetaData, edition: Edition): Map[String, Seq[String]] = {
