@@ -44,14 +44,14 @@ object Commercial {
       val leaderboardAdvertsTop = if (FixedTechTopSlot.isSwitchedOn && isUKTechFront(metaData)) None else Some("728,90")
 
       val mobileAdSizes = Seq("1,1", "88,70", "88,71") ++ leaderboardAdvertsTop ++ fluidAdvertsTop
-      val desktopAdSizes = Seq("1,1", "88,70", "88,71") ++ leaderboardAdvertsTop ++ Seq("940,230", "900,250", "970,250") ++ fluidAdvertsTop
+      val desktopAdSizes = mobileAdSizes ++ Seq("940,230", "900,250", "970,250")
 
       if (WimbledonTopAd.isSwitchedOn && isWimbledonEnabled(metaData, edition)) {
           Map(
               "mobile" -> mobileAdSizes,
-              "tablet" -> (mobileAdSizes ++ Some("720,320")),
-              "desktop" -> (desktopAdSizes ++ Some("720,320")),
-              "left-col" -> (desktopAdSizes ++ Some("970,375"))
+              "tablet" -> (mobileAdSizes ++ Some("720,353")),
+              "desktop" -> (desktopAdSizes ++ Some("720,353")),
+              "left-col" -> (desktopAdSizes ++ Some("970,385"))
           )
       } else {
           Map(
